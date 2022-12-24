@@ -32,14 +32,20 @@ describe('Test header manipulation', () => {
             $element[0].style.top = '0px';
 
             shyJs($element[0], {
-              className: 'i-am-shy'
+              className: 'i-am-shy',
+              intensity: 100
             }, $window);
           });
       });
 
     cy.get('#nav-scroll-test')
       .should('not.have.class', 'i-am-shy');
-    cy.scrollTo(0, 200);
+    cy.scrollTo(0, 50);
+    // because "intensity 100" means at least 100px of change
+    cy.get('#nav-scroll-test')
+      .should('not.have.class', 'i-am-shy');
+    // now it's 200 and should trigger
+    cy.scrollTo(0, 150);
     cy.get('#nav-scroll-test')
       .should('have.class', 'i-am-shy')
       .should('have.css', 'position', 'fixed');

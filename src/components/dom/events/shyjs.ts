@@ -25,39 +25,59 @@ export interface stickyjsSettingsMap{
  *  @param {Window} $window - TEMPORARY
  **/
 export default (element :HTMLElement | null, settings :stickyjsSettingsMap = {}, $window :Window = window ) :void => {
-  if(!element)
+  if(!element) {
+    console.warn("Element were not found");
     return;
-
-  let lastScrollY = 0,
-    hideTop = 0;
+  }
+  // settings
   const {
     elementHeight = 'auto',
     threshold = 0,
     intensity = 0,
     className = 'shyjs-active'
   } = settings;
-
   // determine height if not specified (should never be specified)
-  if(elementHeight === 'auto')
-    hideTop = element.offsetHeight + 1;
+  const hideTop = elementHeight === 'auto' ? element.offsetHeight + 1 : elementHeight as number;
+  // record last scroll position, to determine the direction of the next, and to check intensity
+  let lastScrollY = 0;
 
+  // global event
   $window.addEventListener('scroll', throttle(function() :void {
     // scroll of window
     const scrollY = $window.scrollY;
 
-    if(scrollY >= lastScrollY + intensity && scrollY >= threshold && scrollY > 10){
-      // active shy mode: if this scroll > lastscroll then we are scrolling bottom. If we are above the scroll threshold: hide
-      // WARNING: if on top of page DO NOT hide (10px?). Bugs can occur.
-        if(hideTop != 0)
-          element.style.top = -hideTop + 'px';
-        element.classList.add(className);
-    }else{
-      // remove shy mode: when scrolling top, header need to reappear
+    // WARNING: if on top of page (10px?) DO NOT hide. Bugs can occur.
+    if(scrollY < 10)
+      return;
+
+    // if we are under scroll threshold, do not apply (and remove if any) shyness
+    if(scrollY < threshold){
       if(hideTop != 0)
-        element.style.top = '0px';
+        element.style.top = '';
+      element.classList.remove(className);
+      return;
+    }
+
+    // if the intensity isn't enough, don't change.
+    if(Math.abs(scrollY - lastScrollY) < intensity)
+      return;
+
+    // Detect scroll direction
+    if(scrollY >= lastScrollY){
+      // Towards Bottom
+      // add shy mode: hide header, and apply class (if any)
+      if(hideTop != 0)
+        element.style.top = -hideTop + 'px';
+      element.classList.add(className);
+    }else{
+      // Towards Top
+      // remove shy mode: when scrolling top, header need to reappear, and apply class (if any)
+      if(hideTop != 0)
+        element.style.top = '';
       element.classList.remove(className);
     }
-    // record last scroll position, to determine the direction of the next
-    lastScrollY=scrollY;
-  }, 10));
+
+    // save last scroll
+    lastScrollY = scrollY;
+  }, 20));
 };
