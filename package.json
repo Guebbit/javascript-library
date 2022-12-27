@@ -15,6 +15,7 @@
     "rollup:build": "rollup --config rollup.config.mjs",
     "rollup:serve": "rollup -cw",
     "prepublish": "npm run doc && npm run rollup:build && npm run test && npm run lint",
+    "publish:public": "npm publish --access public",
     "cypress": "cypress run --browser chrome",
     "cypress:open": "cypress open",
     "cypress:serve": "http-server ./cypress/public/ -i -c-1 -d --cors -a localhost -p 8000"
