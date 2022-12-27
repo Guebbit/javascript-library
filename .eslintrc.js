@@ -1,14 +1,17 @@
-// @ts-check
-/* eslint-env node */
-
-'use strict';
-
 /**
  * An object with ESLint options.
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
   root: true,
+  env: {
+    node: true,
+    jest: true,
+    browser: true
+  },
+  plugins: [
+    '@typescript-eslint'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -16,7 +19,6 @@ module.exports = {
     },
     ecmaVersion: 2021,
   },
-  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',

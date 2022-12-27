@@ -29,6 +29,7 @@ export default (element :HTMLElement | null, settings :stickyjsSettingsMap = {},
     console.warn("Element were not found");
     return;
   }
+
   // settings
   const {
     elementHeight = 'auto',

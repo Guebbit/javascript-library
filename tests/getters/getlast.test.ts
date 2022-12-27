@@ -2,7 +2,7 @@ import { getLast } from '../../src';
 
 describe("(getLast) Get last element of array", () => {
 	test("regular array", () => {
-	    expect(
+    expect(
 			getLast([
 				'lorem',
 				'ipsum',

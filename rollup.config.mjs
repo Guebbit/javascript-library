@@ -1,18 +1,6 @@
-import { terser } from 'rollup-plugin-terser';
-import typescript2 from 'rollup-plugin-typescript2';
+import terser from "@rollup/plugin-terser";
+import typescriptPlugin from "@rollup/plugin-typescript"
 import tsPaths from "rollup-plugin-tsconfig-paths";
-
-import pkg from './package.json';
-
-/**
- * Comment with library information to be appended in the generated bundles.
- */
-const banner = `/*!
- * ${pkg.name} v${pkg.version}
- * (c) ${pkg.author.name}
- * Released under the ${pkg.license} License.
- */
-`;
 
 /**
  * Creates an output options object for Rollup.js.
@@ -21,7 +9,6 @@ const banner = `/*!
  */
 function createOutputOptions(options) {
   return {
-    banner,
     name: 'guebbitJavascriptLibrary',
     exports: 'named',
     sourcemap: true,
@@ -65,11 +52,7 @@ const options = {
     }),
   ],
   plugins: [
-    typescript2({
-      clean: true,
-      useTsconfigDeclarationDir: true,
-      tsconfig: './tsconfig.bundle.json',
-    }),
+    typescriptPlugin(),
     tsPaths(),
   ],
   external: [
