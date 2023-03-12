@@ -18,6 +18,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "types",
+    "declarationMap": true,
     "lib": [
       "esnext",
       "dom",
