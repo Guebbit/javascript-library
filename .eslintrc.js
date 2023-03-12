@@ -1,5 +1,10 @@
 /**
  * An object with ESLint options.
+ *
+ * WARNING
+ * "Failed to load plugin '@typescript-eslint' declared in '..\.eslintrc.js': Cannot find module 'eslint/use-at-your-own-risk'"
+ * Solution: IntelliJ didn't pick the current node version from nvm. So it ran with an outdated node version (12 instead of 16) resulting in the error. Use the shell.
+ *
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
@@ -9,8 +14,11 @@ module.exports = {
     jest: true,
     browser: true
   },
-  plugins: [
-    '@typescript-eslint'
+  extends: [
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,11 +27,8 @@ module.exports = {
     },
     ecmaVersion: 2021,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
+  plugins: [
+    '@typescript-eslint'
   ],
   rules: {
     //typescript ! necessari secondo me

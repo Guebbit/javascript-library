@@ -1,6 +1,6 @@
 {
   "name": "@guebbit/javascript-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Andrea Guerzoni",
   "description": "Javascript Library",
   "license": "MIT",
@@ -47,8 +47,8 @@
     "@types/jest": "^29.2.2",
     "@types/lodash": "^4.14.188",
     "@types/prettier": "^2.7.1",
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
-    "@typescript-eslint/parser": "^5.47.0",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
     "cypress": "^12.2.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",

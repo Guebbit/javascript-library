@@ -12,7 +12,7 @@
 
     // Type declaration settings.
     "declaration": true,
-    "declarationDir": "types/",
+    "declarationDir": "types2/",
     "declarationMap": true
   },
   "exclude": [

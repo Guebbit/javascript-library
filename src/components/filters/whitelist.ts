@@ -1,14 +1,15 @@
 /**
-*	WHITELIST
-*	Filter object by array of allowed values
-* 	@param object filter
-*	@param array allowed
-**/
-export default (objToFilter :Record<string, unknown>, allowed:string[]) :Record<string, unknown> => {
-	return Object.keys(objToFilter)
+ * WHITELIST
+ * Filter object by array of allowed values
+ *
+ * @param recordsToFilter - records
+ * @param allowed - allowed keys of records
+ */
+export default <T>(recordsToFilter: Record<string, T>, allowed: string[]) :Record<string, T> => {
+	return Object.keys(recordsToFilter)
 		.filter(key => allowed.includes(key))
-		.reduce((obj :Record<string, unknown>, key :string) => {
-			obj[key] = objToFilter[key];
+		.reduce((obj :Record<string, T>, key) => {
+			obj[key] = recordsToFilter[key] as T;
 			return obj;
 		}, {});
 };

@@ -1,9 +1,9 @@
 /**
 * 	javascript appendChild for arrays
-* 	@param HTMLElement (singolo)
-*	@param array of HTMLElements
+* 	@param element
+*	@param children array di HTMLElements
 **/
-export default (element :HTMLElement, ...children :HTMLElement[] | Element[]) :HTMLElement => {
+export default (element :HTMLElement | Element, ...children :HTMLElement[] | Element[]) :HTMLElement | Element => {
 	const documentFragment = document.createDocumentFragment();
 	children.forEach(child => {
 		if (Array.isArray(child))
