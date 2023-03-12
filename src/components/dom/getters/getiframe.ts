@@ -1,8 +1,7 @@
 /**
-*	Ottengo il documento interno di un iframe
-*	@param HTMLElement iframe
-*	@return HTMLElement
-**/
+ * Get content of Iframe
+ * @param iframe
+ */
 export default (iframe :HTMLElement | HTMLIFrameElement | null) :HTMLElement | HTMLBodyElement | null => {
 	if(!iframe || iframe.tagName !== 'IFRAME')
 		return null;

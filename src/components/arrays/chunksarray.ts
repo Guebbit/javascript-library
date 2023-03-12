@@ -7,10 +7,10 @@ import { divideArray } from '../../';
  * @param {array} array - array to split
  * @param {number} n - number of chunks
  */
-export default (array: unknown[], n: number): unknown[] => {
-  const items = Object.assign([], array),
+export default <T>(array: T[], n: number) :T[][] => {
+  const items = Object.assign([] as T[], array),
     len = items.length,
-    output: unknown[] = [];
+    output: T[][] = [];
   let i = 0;
 
   if (n < 1)

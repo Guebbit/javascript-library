@@ -1,10 +1,11 @@
 /**
-* 	Creo un id univoco così complicato che la collisione è impossibile
-*	[ECMAScript 6] random v4 UUID (gxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx)
-*	(per motivi di compatibilità, nella creazione di ID, non deve iniziare con un numero)
-*	WARNING: for CRYPTO SECURE use https://github.com/uuidjs/uuid
-*	@return string random id
-**/
-declare const _default: () => string;
+ * Create UUID
+ * Random string so complicated and random that collision should be impossible (like addresses on blockchain)
+ * WARNING: For compatibility reason it cannot start with a number
+ * WARNING: For professional crypto secure use: https://github.com/uuidjs/uuid
+ *
+ * @param blueprint
+ */
+declare const _default: (blueprint?: string) => string;
 export default _default;
 //# sourceMappingURL=getuuid.d.ts.map

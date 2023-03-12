@@ -1,4 +1,5 @@
 import { isEmpty } from '../../src';
+// import { isEmpty } from 'lodash';
 
 document.body.innerHTML =
 	'<div>' +
@@ -23,11 +24,16 @@ describe("(isEmpty) php equivalent, check if element/object/value exist and/or i
 			isEmpty(undefined)
 		).toBeTruthy();
 	});
-	test("Empty String variable", () => {
-		expect(
-			isEmpty('')
-		).toBeTruthy();
-	});
+  test("Empty String variable", () => {
+    expect(
+      isEmpty('')
+    ).toBeTruthy();
+  });
+  test("0 number variable", () => {
+    expect(
+      isEmpty(0)
+    ).toBeFalsy(); //AAAAAAAAAAAAAA
+  });
 	test("Empty array", () => {
 		expect(
 			isEmpty([])

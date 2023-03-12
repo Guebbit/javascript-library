@@ -9,6 +9,5 @@ import getDelta from './getdelta';
  * @param {number} Yb - coordinate Y of point B
  * @param {number} size
  */
-export default (Xa :number, Xb :number, Ya :number, Yb :number, size = 0) => {
-  return Math.hypot(getDelta(size, Xa, Xb), getDelta(size, Ya, Yb));
-}
+export default (Xa :number, Xb :number, Ya :number, Yb :number, size = 0) =>
+  Math.hypot(getDelta(size, Xa, Xb), getDelta(size, Ya, Yb));

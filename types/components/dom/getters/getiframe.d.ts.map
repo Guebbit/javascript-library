@@ -1,1 +1,1 @@
-{"version":3,"file":"getiframe.d.ts","sourceRoot":"","sources":["../../../../src/components/dom/getters/getiframe.ts"],"names":[],"mappings":"AAAA;;;;GAIG;iCACqB,WAAW,GAAG,iBAAiB,GAAG,IAAI,KAAG,WAAW,GAAG,eAAe,GAAG,IAAI;AAArG,wBAMC"}
+{"version":3,"file":"getiframe.d.ts","sourceRoot":"","sources":["../../../../src/components/dom/getters/getiframe.ts"],"names":[],"mappings":"AAAA;;;GAGG;iCACqB,WAAW,GAAG,iBAAiB,GAAG,IAAI,KAAG,WAAW,GAAG,eAAe,GAAG,IAAI;AAArG,wBAMC"}

@@ -3,6 +3,6 @@
  *
  * @param {*} check
  */
-declare function getArrayDepth(check: unknown | unknown[]): number;
+declare function getArrayDepth<T>(check: T | T[]): number;
 export default getArrayDepth;
 //# sourceMappingURL=getarraydepth.d.ts.map

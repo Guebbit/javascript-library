@@ -2,11 +2,11 @@ import getValue from "./getvalue";
 import { formatNodeList } from "../../_helpers";
 
 /**
-*	Raccolgo tutti i valori inseriti in input e textarea dentro l'elemento
-*	@param HTMLElement elemente
-*	@param string selectors
-*	@return array ["name":"value"]
-**/
+ * Get all values from different input and textareas
+ * @param form
+ * @param selectors
+ * @return array of ["name":"value"]
+ */
 export default (form :HTMLElement | null, selectors = "input, textarea, select") :Record<string, unknown> => {
 	if(!form)
 		return {};

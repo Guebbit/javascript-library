@@ -1,4 +1,5 @@
 /**
+ * TODO da fare con tutte le funzioni possibili
  * WHITELIST
  * Filter object by array of allowed values
  *

@@ -1,8 +1,7 @@
 /**
-* 	equivalente Jquery di .siblings()
-* 	@param HTMLelement element of which we find siblings
-* 	@return array of siblings
-**/
+ * Equivalent of Jquery .siblings()
+ * @param element
+ */
 declare const _default: (element: HTMLElement | Element | null) => Element[];
 export default _default;
 //# sourceMappingURL=getsiblings.d.ts.map

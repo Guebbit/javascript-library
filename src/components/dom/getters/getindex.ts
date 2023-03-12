@@ -1,9 +1,7 @@
 /**
-* 	equivalente Jquery di .index()
-* 	@param HTMLelement element
-* 	@param HTMLelement parent
-* 	@return mixed ultimo elemento dell'array
-**/
+ * Equivalent of Jquery .index()
+ * @param element
+ */
 export default (element :HTMLElement | null) :number => {
 	if(!element)
 		return -1;

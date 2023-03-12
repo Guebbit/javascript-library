@@ -1,9 +1,8 @@
 /**
-*	Ottieni valore\contenuto di un elemento (singolo)
-*	@param HTMLElement {element}
-*	@param string {attribute}: if not empty, it's an attribute, where to take the data
-*	@return string
-**/
+ * Get value of a HTML element
+ * @param element
+ * @param attribute - if not empty: it's an attribute
+ */
 export default (element :HTMLElement | null, attribute = '') :string | number | boolean | null => {
 	//if non valid element
 	if(!element)

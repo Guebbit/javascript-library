@@ -11,3 +11,4 @@ TODO:
 
 TODO?
 separare Mouseparallax, Search, ClassScroll e ShyScroll in mini repo separate da poi includere qui dentro?
+Poi dopo separare la cartella DOM in un altro progetto a parte, non credo li userò più, tenere magari solo alcuni come gli helpers intersection e lazyload?

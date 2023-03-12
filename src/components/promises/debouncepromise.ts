@@ -1,3 +1,9 @@
+/**
+ * Debounce promises
+ *
+ * @param f
+ * @param interval
+ */
 export default async (f :(...args :unknown[]) => unknown, interval :number) => {
 	let timer = 0;
 	return (...args :unknown[]) => {
