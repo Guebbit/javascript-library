@@ -17,7 +17,6 @@ describe("(MAIN) Check the integrity of the whole library", () => {
       'chunksArray',
       'getArrayDepth',
       'isEmail',
-      'isEmpty',
       'isJson',
       'isUrl',
       'rangeOverlaps',
@@ -67,10 +66,6 @@ describe("(MAIN) Check the integrity of the whole library", () => {
       'getMapDistance',
       'matrixTranspose',
       'levenshteinDistance',
-      'createNestedProperty',
-      'getNestedProperty',
-      'hasOwnNestedProperty',
-      'removeNestedProperty',
       'debouncePromise',
       'scripts'
     ])
