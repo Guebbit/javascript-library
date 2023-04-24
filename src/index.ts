@@ -30,8 +30,9 @@ export { default as chunksArray } from "./components/arrays/chunksarray";
 export { default as getArrayDepth } from "./components/arrays/getarraydepth";
 
 export { default as isEmail } from "./components/checkers/isemail"
-export { default as isJson } from "./components/checkers/isjson";
-export { default as isUrl } from "./components/checkers/isurl";
+export { default as isJSON } from "./components/checkers/isjson";
+export { default as isRGB } from "./components/checkers/isrgb";
+export { default as isURL } from "./components/checkers/isurl";
 export { default as rangeOverlaps } from "./components/checkers/rangeoverlaps";
 
 export { default as hexToRGB } from "./components/converters/hextorgb";

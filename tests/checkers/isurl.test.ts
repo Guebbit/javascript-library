@@ -1,35 +1,35 @@
-import { isUrl } from '../../src';
+import { isURL } from '../../src';
 
 describe("(isObject) check if object", () => {
 	test("Empty string", () => {
 		expect(
-			isUrl('')
+			isURL('')
 		).toBeFalsy();
 	});
 	test("Some string", () => {
 		expect(
-			isUrl('lorem ipsum')
+			isURL('lorem ipsum')
 		).toBeFalsy();
 	});
 
 	test("Email", () => {
 		expect(
-			isUrl('lorem@ipsum.it')
+			isURL('lorem@ipsum.it')
 		).toBeFalsy();
 	});
 	test("Url but not quite 1 (return true)", () => {
 		expect(
-			isUrl('lorem.ipsum')
+			isURL('lorem.ipsum')
 		).toBeTruthy();
 	});
 	test("Url but not quite 2 (return false)", () => {
 		expect(
-			isUrl('lorem.ipsum:')
+			isURL('lorem.ipsum:')
 		).toBeFalsy();
 	});
 	test("Real URL", () => {
 		expect(
-			isUrl('https://lodash.com/')
+			isURL('https://lodash.com/')
 		).toBeTruthy();
 	});
 });

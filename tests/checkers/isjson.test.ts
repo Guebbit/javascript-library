@@ -1,29 +1,29 @@
-import { isJson } from '../../src';
+import { isJSON } from '../../src';
 
-describe("(isJson) check if JSON is valid", () => {
+describe("(isJSON) check if JSON is valid", () => {
 	test("Empty string", () => {
 		expect(
-			isJson('')
+			isJSON('')
 		).toBeFalsy();
 	});
 	test("Empty JSON array", () => {
 		expect(
-			isJson('[]')
+			isJSON('[]')
 		).toBeTruthy();
 	});
 	test("Empty JSON object", () => {
 		expect(
-			isJson('{}')
+			isJSON('{}')
 		).toBeTruthy();
 	});
 	test("Empty JSON array", () => {
 		expect(
-			isJson('["lorem", "ipsum"]')
+			isJSON('["lorem", "ipsum"]')
 		).toBeTruthy();
 	});
 	test("Empty JSON object", () => {
 		expect(
-			isJson('{"lorem": "ipsum"}')
+			isJSON('{"lorem": "ipsum"}')
 		).toBeTruthy();
 	});
 });

@@ -1,6 +1,6 @@
 {
   "name": "@guebbit/javascript-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Andrea Guerzoni",
   "description": "Javascript Library",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "test:lint": "eslint \"*/**/*.{ts,js,json}\"",
     "test:unit": "jest",
     "test:main": "jest tests/index.test.ts",
-    "test:target": "jest tests/checkers/isempty.test.ts",
+    "test:target": "jest tests/checkers/isrgb.test.ts",
     "lint": "eslint \"*/**/*.{ts,js,json}\" --fix",
     "types:build": "tsc",
     "rollup:build": "rollup --config rollup.config.mjs",
