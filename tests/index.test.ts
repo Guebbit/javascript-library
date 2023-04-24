@@ -18,7 +18,7 @@ describe("(MAIN) Check the integrity of the whole library", () => {
       'getArrayDepth',
       'isEmail',
       'isJSON',
-      'isRGB',
+      'isHex',
       'isURL',
       'rangeOverlaps',
       'hexToRGB',

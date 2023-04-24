@@ -31,7 +31,7 @@ export { default as getArrayDepth } from "./components/arrays/getarraydepth";
 
 export { default as isEmail } from "./components/checkers/isemail"
 export { default as isJSON } from "./components/checkers/isjson";
-export { default as isRGB } from "./components/checkers/isrgb";
+export { default as isHex } from "./components/checkers/ishex";
 export { default as isURL } from "./components/checkers/isurl";
 export { default as rangeOverlaps } from "./components/checkers/rangeoverlaps";
 
