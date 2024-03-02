@@ -1,5 +1,6 @@
 import getValue from "./getvalue";
 import { formatNodeList } from "../../_helpers";
+// TODO Object.fromEntries(new FormData(event.currentTarget))
 
 /**
  * Get all values from different input and textareas
